@@ -101,9 +101,9 @@ public class QueueExerciseTest {
             String name = qe.removeFromStartOfQueue(queue);
             Assert.assertEquals(name, "Jim");
             name = qe.removeFromStartOfQueue(queue);
-            Assert.assertEquals(name, "Sally");
-            name = qe.removeFromStartOfQueue(queue);
             Assert.assertEquals(name, "Kate");
+            name = qe.removeFromStartOfQueue(queue);
+            Assert.assertEquals(name, "Sally");
             Assert.assertEquals(qe.getSize(queue), 0);
         }
     }
