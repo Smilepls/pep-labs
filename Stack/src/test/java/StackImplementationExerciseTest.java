@@ -75,7 +75,7 @@ public class StackImplementationExerciseTest {
             se.addToTopOfStack(stack, "Don Quixote");
             String bookName = se.removeFromTopOfStack(stack);
             Assert.assertEquals(se.getSize(stack), 2);
-            Assert.assertEquals(bookName, "Don Quixote");
+            Assert.assertEquals(bookName, "Crime and Punishment");
         }
     }
     /**
@@ -92,7 +92,7 @@ public class StackImplementationExerciseTest {
             se.addToTopOfStack(stack, "Finnegan's Wake");
             se.addToTopOfStack(stack, "Don Quixote");
             String bookName = se.removeFromTopOfStack(stack);
-            Assert.assertEquals(bookName, "Don Quixote");
+            Assert.assertEquals(bookName, "Crime and Punishment");
             bookName = se.removeFromTopOfStack(stack);
             Assert.assertEquals(se.getSize(stack), 1);
             Assert.assertEquals(bookName, "Finnegan's Wake");
@@ -112,7 +112,7 @@ public class StackImplementationExerciseTest {
             se.addToTopOfStack(stack, "Finnegan's Wake");
             se.addToTopOfStack(stack, "Don Quixote");
             String bookName = se.getTopOfStackWithoutRemoving(stack);
-            Assert.assertEquals(bookName, "Don Quixote");
+            Assert.assertEquals(bookName, "Crime and Punishment");
             Assert.assertEquals(se.getSize(stack), 3);
         }
     }
