@@ -1,3 +1,3 @@
 SELECT*FROM character 
-WHERE 
+IF(last_name =0) 
 ORDER BY last_name ASC;
