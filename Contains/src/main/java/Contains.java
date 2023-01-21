@@ -1,4 +1,4 @@
-
+import org.eclipse.jetty.util.ArrayUtil;
 
 public class Contains {
 
@@ -11,6 +11,11 @@ public class Contains {
      * @return true if arr contains target, false otherwise.
      */
     public boolean arrayContains(int[] arr, int target){
-        return false;
+       for(int i : arr){
+        if(i == target){
+            return true;
+        }
+       }
+       return false;
     }
 }
