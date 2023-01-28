@@ -13,13 +13,15 @@ public class JavalinSingleton {
      */
     public static Javalin getInstance(){
       
+     Javalin app =  Javalin.create();
 
-       curl ("localhost:9000/hello", ctx ->{
-            ctx.result("Hello World");
-       });
-       curl ("localhost:9000/hello", ctx ->{
-            ctx.result("HelloWorld");
-       });
+     app.get("/hello", ctx ->{
+          ctx.result("Hello World");
+     });
+
+     app.post("/hello", ctx ->{
+          ctx.result("Hello World");
+     });
        
 
         return app;

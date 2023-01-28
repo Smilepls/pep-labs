@@ -17,5 +17,7 @@ public class App
         Javalin app = JavalinSingleton.getInstance();
 
         app.start(9000);
+
+       
     }
 }
