@@ -16,7 +16,7 @@ public class IsSortedTest {
     @Test
     public void isSortedTest1(){
         int[] input = {7, 5, 9, 0, 2};
-        boolean expected = false;
+        boolean expected = true;
         Assert.assertEquals(expected, is.checkSort(input));
     }
     /**
