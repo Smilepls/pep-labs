@@ -33,7 +33,7 @@ public class FlightDAO {
         List<Flight> flights = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "select * from Flights";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
@@ -66,7 +66,7 @@ public class FlightDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "select * from Flights where Flight_id" + id;
             
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
@@ -108,10 +108,11 @@ public class FlightDAO {
         try {
             //Write SQL logic here. When inserting, you only need to define the departure_city and arrival_city
             //values (two columns total!)
-            String sql = "change me" ;
+            String sql = "insert into Flight"+ flight +"values(?,?)" ;
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
-            //write preparedStatement's setString and setInt methods here.
+            preparedStatement.setString(1, "Atlanta");
+            preparedStatement.setString(2, "Oregon");
 
 
             preparedStatement.executeUpdate();
@@ -147,12 +148,10 @@ public class FlightDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "update Flight set flight_id=?, departure_city =? where arrival_city =?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-            //write PreparedStatement setString and setInt methods here.
-
-
+          
             preparedStatement.executeUpdate();
         }catch(SQLException e){
             System.out.println(e.getMessage());
